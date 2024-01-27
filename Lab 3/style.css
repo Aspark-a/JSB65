@@ -1,0 +1,62 @@
+*{
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+    nav,header,footer,article,aside {
+        border: 1px solid black
+    }
+
+    body {
+        display: flex;
+    }
+
+        nav {
+            background-color: antiquewhite;
+            width: 30%;
+            height: 600px;
+        }
+
+        main {
+            width: 70%;
+            height: 600px;
+            display: flex;
+        }
+
+        header {
+            height: bisque;
+        }
+
+        header,footer {
+            background: bisque;
+        }
+
+        footer {
+            min-height: 100px;
+        }
+
+        article{
+            background: bisque;
+        }
+
+        aside {
+            background-color: thistle;
+            width: 20%;
+            height: 500px;
+        }
+        .content {
+            height: 500px;
+            display: flex;
+            flex-flow: row nowrap;
+            /* align-items: stretch; */
+        }
+
+        .content .left {
+            width: 80%;
+            display: flex;
+            flex-flow: column wrap;
+        }
+
+        .content .right {
+            width: 20%;
+            /* max-height: 500px; */
+        }
