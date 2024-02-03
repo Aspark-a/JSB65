@@ -1,0 +1,14 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+p {
+    font: size 10px;
+    text-align: center;
+    display: inline-table;
+}
+
+img {
+    text-align: center;
+    display: inline-table;
+}
