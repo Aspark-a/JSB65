@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checkpoint 2</title>
+</head>
+<body>
+    <form action="" method="">
+        <label for="student-name">Họ và tên</label>
+        <input type="text" name="student-name" id="student-name" required>
+        <label for="student-point">điểm</label>
+        <input type="number" min="0" max="10" name="student-point" id="student-point"/>
+        <input type="submit" value="Save" id="submit-form">
+    </form>
+    <script>
+        function saveLocal(name, point) {
+            const student = { stu_name: name, stu_point: point};
+            localStorage.setItem(name, JSON.stringify(student));
+        }
+        function xuatKetQua(name, point) {
+            const form = document.querySelector("form");
+            form.style = "display: none;"
+            const result = document.createElement("h1");
+            result.innerText = name + ":" + xepHang(point);
+            document.querySelector("body").prepend(result)
+        }
+        function xepHang(point) {
+            point parseFloat(point);
+            if (point < 4) {
+          return "Yếu";
+        } else if (point < 6) {
+          return "Trung bình";
+        } else if (point < 8) {
+          return "Khá";
+        } else if (point < 9,5) {
+          return "Giỏi";
+        } else return "Xuất Sắc";
+    }
+    const submit_btn = document.getElementById("submit-form");
+      submit_btn.addEventListener("click", () => {
+          // lay du lieu cua form
+          const student_name = document.querySelector("#student-name").value;
+          const student_point = document.getElementById("student-point").value;
+
+          saveLocal(student_name, student_point);
+          xuatKetQua(student_name, student_point);  
+        });
+    </script>
+</body>
+</html>
