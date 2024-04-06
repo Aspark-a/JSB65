@@ -8,9 +8,20 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+p {
+    font-size: 20px;
+    color: #009f7f;
+}
+
+span {
+    font-size: 30px;
+    color: #282834;
+}
+
 h1, h2{
     font-family: sans-serif;
     font-weight: 400;
+    color: #000;
 }
 
 a {
@@ -49,7 +60,7 @@ button {
     background: none;
     font-weight: bold;
     border: 2px, solid white;
-    color: white;
+    color: #7fc142;
 }
 
 .container {
@@ -272,3 +283,30 @@ h1 {
     margin: 30px 0;
 }
 /*--------about--------*/
+/*--------counter--------*/
+.counter {           
+    background-image: url("https://imageio.forbes.com/specials-images/imageserve/5cdb058a5218470008b0b00f/Nobu-Ryokan-Malibu/0x0.jpg?format=jpg&height=280&width=500");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 30vh;
+    width: 100%;
+    color: #fff;
+}.counter .grid  {
+    grid-template-columns: repeat(4,1 fr);
+    text-align: center;
+    place-items: center;
+    padding-top: 60px;
+}
+
+.counter h1 {
+    font-size: 50px;
+}
+
+.counter hr {
+    width: 50%;
+    margin: 10px auto;
+    background: #7fc142;
+    height: 2px;
+    border: none;
+}
+/*--------counter--------*/
